@@ -1,0 +1,31 @@
+<Page
+    x:Class="GameStore.LoginPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Padding="40" ColumnSpacing="40">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="10">
+            <TextBlock Text="GAME STORE" Style="{StaticResource BrandTitleStyle}" FontSize="56" HorizontalAlignment="Center" />
+            <Rectangle Height="4" Width="220" RadiusX="2" RadiusY="2" Fill="{StaticResource GreenBrush}" HorizontalAlignment="Center" />
+            <TextBlock Text="Los mejores juegos, en un solo lugar" Foreground="{StaticResource TextMutedBrush}"
+                       FontSize="16" HorizontalAlignment="Center" Margin="0,0,0,30" />
+            <StackPanel x:Name="CoversStrip" Orientation="Horizontal" HorizontalAlignment="Center" />
+        </StackPanel>
+
+        <Border Grid.Column="1" Width="380" VerticalAlignment="Center" Style="{StaticResource PanelBorderStyle}"
+                BorderBrush="{StaticResource GoldBrush}" BorderThickness="2" Padding="32">
+            <StackPanel Spacing="14">
+                <TextBlock Text="Iniciar sesión" Style="{StaticResource SectionTitleStyle}" />
+                <TextBox x:Name="UsernameBox" Header="Usuario" MaxLength="30" />
+                <PasswordBox x:Name="PasswordInput" Header="Contraseña" MaxLength="30" KeyDown="PasswordInput_KeyDown" />
+                <Button Content="Iniciar sesión" HorizontalAlignment="Stretch" Margin="0,8,0,0"
+                        Style="{StaticResource AccentButtonStyle}" Click="Login_Click" />
+                <Button Content="Crear cuenta" HorizontalAlignment="Stretch" Click="Register_Click" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

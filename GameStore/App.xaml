@@ -1,0 +1,123 @@
+<Application
+    x:Class="GameStore.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    RequestedTheme="Dark">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <Color x:Key="BlackColor">#0A0A0F</Color>
+            <Color x:Key="PanelColor">#141022</Color>
+            <Color x:Key="PanelAltColor">#1C1530</Color>
+            <Color x:Key="PurpleColor">#7C3AED</Color>
+            <Color x:Key="PurpleDarkColor">#3B2670</Color>
+            <Color x:Key="GoldColor">#D4AF37</Color>
+            <Color x:Key="GoldLightColor">#F2D16B</Color>
+            <Color x:Key="GreenColor">#22C55E</Color>
+            <Color x:Key="TextColor">#F5F0FF</Color>
+            <Color x:Key="TextMutedColor">#B8AED6</Color>
+
+            <SolidColorBrush x:Key="BlackBrush" Color="{StaticResource BlackColor}" />
+            <SolidColorBrush x:Key="PanelBrush" Color="{StaticResource PanelColor}" />
+            <SolidColorBrush x:Key="PanelAltBrush" Color="{StaticResource PanelAltColor}" />
+            <SolidColorBrush x:Key="PurpleBrush" Color="{StaticResource PurpleColor}" />
+            <SolidColorBrush x:Key="PurpleDarkBrush" Color="{StaticResource PurpleDarkColor}" />
+            <SolidColorBrush x:Key="GoldBrush" Color="{StaticResource GoldColor}" />
+            <SolidColorBrush x:Key="GoldLightBrush" Color="{StaticResource GoldLightColor}" />
+            <SolidColorBrush x:Key="GreenBrush" Color="{StaticResource GreenColor}" />
+            <SolidColorBrush x:Key="TextBrush" Color="{StaticResource TextColor}" />
+            <SolidColorBrush x:Key="TextMutedBrush" Color="{StaticResource TextMutedColor}" />
+
+            <LinearGradientBrush x:Key="AppBackgroundBrush" StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#0A0A0F" Offset="0" />
+                <GradientStop Color="#1A0F33" Offset="0.55" />
+                <GradientStop Color="#0A1A12" Offset="1" />
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="GoldGradientBrush" StartPoint="0,0" EndPoint="1,0">
+                <GradientStop Color="#D4AF37" Offset="0" />
+                <GradientStop Color="#F2D16B" Offset="0.5" />
+                <GradientStop Color="#D4AF37" Offset="1" />
+            </LinearGradientBrush>
+
+
+            <SolidColorBrush x:Key="AccentButtonBackground" Color="#D4AF37" />
+            <SolidColorBrush x:Key="AccentButtonBackgroundPointerOver" Color="#F2D16B" />
+            <SolidColorBrush x:Key="AccentButtonBackgroundPressed" Color="#B8932B" />
+            <SolidColorBrush x:Key="AccentButtonBackgroundDisabled" Color="#4A4330" />
+            <SolidColorBrush x:Key="AccentButtonForeground" Color="#0A0A0F" />
+            <SolidColorBrush x:Key="AccentButtonForegroundPointerOver" Color="#0A0A0F" />
+            <SolidColorBrush x:Key="AccentButtonForegroundPressed" Color="#0A0A0F" />
+            <SolidColorBrush x:Key="AccentButtonForegroundDisabled" Color="#8A8470" />
+            <SolidColorBrush x:Key="AccentButtonBorderBrush" Color="#F2D16B" />
+            <SolidColorBrush x:Key="AccentButtonBorderBrushPointerOver" Color="#F2D16B" />
+            <SolidColorBrush x:Key="AccentButtonBorderBrushPressed" Color="#B8932B" />
+
+            <SolidColorBrush x:Key="ButtonBackground" Color="#2A1B4D" />
+            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#3B2670" />
+            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#5B21B6" />
+            <SolidColorBrush x:Key="ButtonForeground" Color="#F5F0FF" />
+            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="#F5F0FF" />
+            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="#F5F0FF" />
+            <SolidColorBrush x:Key="ButtonBorderBrush" Color="#7C3AED" />
+            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#D4AF37" />
+            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#F2D16B" />
+
+            <SolidColorBrush x:Key="TextControlBackground" Color="#1C1530" />
+            <SolidColorBrush x:Key="TextControlBackgroundPointerOver" Color="#241A40" />
+            <SolidColorBrush x:Key="TextControlBackgroundFocused" Color="#241A40" />
+            <SolidColorBrush x:Key="TextControlBorderBrush" Color="#5B3FA8" />
+            <SolidColorBrush x:Key="TextControlBorderBrushPointerOver" Color="#7C3AED" />
+            <SolidColorBrush x:Key="TextControlBorderBrushFocused" Color="#D4AF37" />
+            <SolidColorBrush x:Key="TextControlForeground" Color="#F5F0FF" />
+            <SolidColorBrush x:Key="TextControlForegroundPointerOver" Color="#F5F0FF" />
+            <SolidColorBrush x:Key="TextControlForegroundFocused" Color="#F5F0FF" />
+            <SolidColorBrush x:Key="TextControlHeaderForeground" Color="#D4AF37" />
+            <SolidColorBrush x:Key="TextControlPlaceholderForeground" Color="#8A80A8" />
+
+            <SolidColorBrush x:Key="ListViewItemBackgroundPointerOver" Color="#241A40" />
+            <SolidColorBrush x:Key="ListViewItemBackgroundSelected" Color="#3B2670" />
+            <SolidColorBrush x:Key="ListViewItemBackgroundSelectedPointerOver" Color="#4A2F8A" />
+            <SolidColorBrush x:Key="ListViewItemBackgroundPressed" Color="#2E2057" />
+            <SolidColorBrush x:Key="ListViewItemSelectionIndicatorBrush" Color="#D4AF37" />
+            <SolidColorBrush x:Key="GridViewItemBackgroundPointerOver" Color="#241A40" />
+            <SolidColorBrush x:Key="GridViewItemBackgroundSelected" Color="#D4AF37" />
+            <SolidColorBrush x:Key="GridViewItemBackgroundSelectedPointerOver" Color="#F2D16B" />
+            <SolidColorBrush x:Key="GridViewItemBackgroundPressed" Color="#2E2057" />
+
+            <SolidColorBrush x:Key="ContentDialogBackground" Color="#141022" />
+            <SolidColorBrush x:Key="ContentDialogBorderBrush" Color="#D4AF37" />
+            <SolidColorBrush x:Key="ContentDialogForeground" Color="#F5F0FF" />
+            <SolidColorBrush x:Key="ContentDialogTopOverlay" Color="#1C1530" />
+
+            <Style x:Key="BrandTitleStyle" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="44" />
+                <Setter Property="FontWeight" Value="ExtraBold" />
+                <Setter Property="CharacterSpacing" Value="150" />
+                <Setter Property="Foreground" Value="{StaticResource GoldLightBrush}" />
+            </Style>
+
+            <Style x:Key="SectionTitleStyle" TargetType="TextBlock" BasedOn="{StaticResource SubtitleTextBlockStyle}">
+                <Setter Property="Foreground" Value="{StaticResource GoldBrush}" />
+                <Setter Property="FontWeight" Value="SemiBold" />
+            </Style>
+
+            <Style x:Key="PanelBorderStyle" TargetType="Border">
+                <Setter Property="Background" Value="{StaticResource PanelBrush}" />
+                <Setter Property="BorderBrush" Value="{StaticResource PurpleBrush}" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="Padding" Value="16" />
+            </Style>
+
+            <Style x:Key="CardContainerStyle" TargetType="GridViewItem">
+                <Setter Property="Margin" Value="6" />
+                <Setter Property="Padding" Value="3" />
+                <Setter Property="CornerRadius" Value="12" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
